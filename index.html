@@ -515,7 +515,7 @@ async function consultar() {
 
     const useProxy = document.getElementById('useProxy').checked;
     let url = 'https://www.placas.app.br/';
-    if (useProxy) url = 'https://corsproxy.io/?' + encodeURIComponent(url);
+    if (useProxy) url = 'https://api-web-br.vercel.app/api/proxy.js?url=' + encodeURIComponent(url);
 
     try {
         const body = new URLSearchParams();
